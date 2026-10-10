@@ -8,20 +8,16 @@
 
 body {
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
     padding: 2.5vw 10vw;
 }
 
-nav {
-    font-weight: bold;
-    letter-spacing: -2px;
-    font-size: 80px;
-}
-
 ul {
-    display: flex;
     justify-content: space-between;
     list-style: none;
+}
+
+.nav-ul {
+    display: flex;
 }
 
 a {
@@ -33,6 +29,15 @@ main {
     margin-top: 20px;
 }
 
+.header {
+    letter-spacing: -2px;
+    font-size: 80px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -40,13 +45,30 @@ main {
     gap: 15px;
 }
 
-.grid-link {
-    font-weight: bold;
-    font-size: 50px;
-}
-
 .grid-item {
     background-color: chartreuse;
-    padding: 30px;
-    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* The background track of the scrollbar */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* The draggable handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* The draggable handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
