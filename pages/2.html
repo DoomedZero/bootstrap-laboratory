@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+    <style>
+        /* Custom styles to clearly visualize the grid sections */
+        .grid-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .nested-box {
+            background-color: #e9ecef;
+            border: 1px dashed #6c757d;
+            padding: 10px;
+        }
+
+        h2 {
+            margin-top: 25px;
+            color: #212529;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-5">Bootstrap Grid System Demonstration</h1>
+
+        <!-- 1. STANDARD COLUMNS -->
+        <h2>1. Standard Responsive Columns</h2>
+        <p>A standard 12-column grid splitting into equal and unequal widths on medium screens (md) and above.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="grid-box"><strong>col-md-4</strong> (1/3 Width)</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box"><strong>col-md-4</strong> (1/3 Width)</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box"><strong>col-md-4</strong> (1/3 Width)</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="grid-box"><strong>col-md-8</strong> (2/3 Width)</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box"><strong>col-md-4</strong> (1/3 Width)</div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 2. OFFSET COLUMNS -->
+        <h2>2. Offset Columns</h2>
+        <p>Moving columns to the right using the <code>offset-*</code> utility class.</p>
+        <div class="row">
+            <!-- This column spans 4 units and shifts right by 4 units, effectively centering it -->
+            <div class="col-md-4 offset-md-4">
+                <div class="grid-box bg-warning-subtle">
+                    <strong>col-md-4 offset-md-4</strong><br>
+                    Spans 4 units, skipped 4 units on the left.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Two columns separated by an explicit blank space -->
+            <div class="col-md-3">
+                <div class="grid-box bg-warning-subtle"><strong>col-md-3</strong></div>
+            </div>
+            <div class="col-md-3 offset-md-6">
+                <div class="grid-box bg-warning-subtle"><strong>col-md-3 offset-md-6</strong><br>Pushed to the far
+                    right.</div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- 3. NESTED COLUMNS -->
+        <h2>3. Nested Columns</h2>
+        <p>Placing a brand new <code>.row</code> inside an existing column. The inner row resets to a fresh 12-column
+            pool.</p>
+        <div class="row">
+            <!-- Main Parent Column -->
+            <div class="col-md-9">
+                <div class="grid-box bg-info-subtle text-start">
+                    <p class="mb-3"><strong>Parent Column (col-md-9)</strong> - Inside me lives a fresh nested row:</p>
+
+                    <!-- Inner Row resets the 12-column math for its children -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="grid-box nested-box"><strong>Nested col-md-6</strong> (Half of parent)</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="grid-box nested-box"><strong>Nested col-md-6</strong> (Half of parent)</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sidebar Parent Column -->
+            <div class="col-md-3">
+                <div class="grid-box bg-secondary text-white">
+                    <strong>Sidebar (col-md-3)</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

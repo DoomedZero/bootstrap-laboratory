@@ -1,231 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical-3</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical-3</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <style>
+    /* Optional custom styles for timetable clarity */
+    .timetable-header {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      border-bottom: 2px solid #dee2e6;
+    }
+
+    .timetable-row {
+      border-bottom: 1px solid #dee2e6;
+      min-height: 80px;
+    }
+
+    .time-col {
+      background-color: #f1f3f5;
+      font-weight: 600;
+      border-right: 1px solid #dee2e6;
+    }
+
+    .slot {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+
+    .slot-card {
+      background-color: #e7f5ff;
+      border-left: 4px solid #1c7ed6;
+      border-radius: 4px;
+      height: 100%;
+    }
+
+    .slot-card.break {
+      background-color: #fff0f6;
+      border-left: 4px solid #d6336c;
+    }
+  </style>
+
 </head>
+
 <body>
-    <div class="container d-inline-block w-auto">
-        <div class="row bg-primary-subtle text-primary-emhpasis">
-            <div class="col border" style="max-width: 120px;">Day</div>
-            <div class="col">
-                <div class="row border">
-                    <div class="col border" style="width: 250px;">Time</div>
-                    <div class="col border">CO34</div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col border" style="max-width: 120px;">Monday</div>
-            <div class="col">
-                <div class="row">
-                    <div class="col border" style="width: 250px;">10:30 to 11:30</div>
-                    <div class="col border border-bottom-0">RWPD-CO341-VBB(L12B)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">11:30 to 12:30</div>
-                    <div class="col border border-top-0">FOS-CO342-BCC(L12A)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">12:30 to 01:00</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">01:00 to 02:00</div>
-                    <div class="col border">RDBMS-DVP(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">02:00 to 03:00</div>
-                    <div class="col border">CN-JAS(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">03:00 to 04:00</div>
-                    <div class="col border">DEF-ALP(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:00 to 04:10</div>
-                    <div class="col border"></div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:10 to 05:10</div>
-                    <div class="col border"></div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">05:10 to 06:10</div>
-                    <div class="col border"></div>
-                </div>
-            </div>
-        </div>
-        <!-- TUESDAY -->
-        <div class="row">
-            <div class="col border" style="max-width: 120px;">Tuesday</div>
-            <div class="col">
-                <div class="row">
-                    <div class="col border" style="width: 250px;">10:30 to 11:30</div>
-                    <div class="col border border-bottom-0">CN-CO341-JAS(L13A)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">11:30 to 12:30</div>
-                    <div class="col border border-top-0">RWPD-CO342-HVK(L3)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">12:30 to 01:00</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">01:00 to 02:00</div>
-                    <div class="col border">DS-RPV(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">02:00 to 03:00</div>
-                    <div class="col border">CN-JAS(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">03:00 to 04:00</div>
-                    <div class="col border">FOS-BCC(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:00 to 04:10</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:10 to 05:10</div>
-                    <div class="col border border-bottom-0">DS-CO341-RPV(L8)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">05:10 to 06:10</div>
-                    <div class="col border border-top-0">RDBMS-CO342-BDM(L5)</div>
-                </div>
-            </div>
-        </div>
-        <!-- WEDNESDAY-->
-        <div class="row">
-            <div class="col border" style="max-width: 120px;">Wednesday</div>
-            <div class="col">
-                <div class="row">
-                    <div class="col border" style="width: 250px;">10:30 to 11:30</div>
-                    <div class="col border border-bottom-0">RDBMS-CO341-DVP(L12B)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">11:30 to 12:30</div>
-                    <div class="col border border-top-0">DS-CO342-NAP(L12A)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">12:30 to 01:00</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">01:00 to 02:00</div>
-                    <div class="col border">RDBMS-DVP(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">02:00 to 03:00</div>
-                    <div class="col border">CN-JAS(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">03:00 to 04:00</div>
-                    <div class="col border">DEF-ALP(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:00 to 04:10</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:10 to 05:10</div>
-                    <div class="col border">FOS-BCC(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">05:10 to 06:10</div>
-                    <div class="col border">DEF-ALP(454)</div>
-                </div>
-            </div>
-        </div>
-        <!-- THURSDAY -->
-        <div class="row">
-            <div class="col border" style="max-width: 120px;">Thursday</div>
-            <div class="col">
-                <div class="row">
-                    <div class="col border" style="width: 250px;">10:30 to 11:30</div>
-                    <div class="col border">RDBMS-DVP(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">11:30 to 12:30</div>
-                    <div class="col border">DSA-RPV(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">12:30 to 01:00</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">01:00 to 02:00</div>
-                    <div class="col border border-bottom-0">DEF-CO341-ALP(L7)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">02:00 to 03:00</div>
-                    <div class="col border border-top-0">RWPD-CO342-HNT(L3)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">03:00 to 04:00</div>
-                    <div class="col border">RWPD(T)-HVK(L1) <br> RWPD(T)- SDS(L3)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:00 to 04:10</div>
-                    <div class="col border"></div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:10 to 05:10</div>
-                    <div class="col border"></div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">05:10 to 06:10</div>
-                    <div class="col border"></div>
-                </div>
-            </div>
-        </div>
-        <!-- FRIDAY-->
-        <div class="row">
-            <div class="col border" style="max-width: 120px;">Friday</div>
-            <div class="col">
-                <div class="row">
-                    <div class="col border" style="width: 250px;">10:30 to 11:30</div>
-                    <div class="col border border-bottom-0">CN-JAS(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">11:30 to 12:30</div>
-                    <div class="col border border-top-0">FOS-BCC(454)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">12:30 to 01:00</div>
-                    <div class="col border">Break</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">01:00 to 02:00</div>
-                    <div class="col border">RWPD-CO341-HNT(L10)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">02:00 to 03:00</div>
-                    <div class="col border">CN-CO342-JAS(L9)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">03:00 to 04:00</div>
-                    <div class="col border border-bottom-0">FOS-CO341-BCC(L12A)</div>
-                </div>
-                <!-- <div class="row">
-                    <div class="col border" style="width: 250px;">04:00 to 04:10</div>
-                    <div class="col border">Break</div>
-                </div> -->
-                <div class="row">
-                    <div class="col border" style="width: 250px;">04:10 to 05:10</div>
-                    <div class="col border border-top-0">DEF-CO342-ALP(L8)</div>
-                </div>
-                <div class="row">
-                    <div class="col border" style="width: 250px;">05:10 to 06:10</div>
-                    <div class="col border"></div>
-                </div>
-            </div>
-        </div>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Weekly Schedule</h2>
+
+    <!-- Timetable Header -->
+    <div class="row timetable-header text-center py-3 g-0 d-none d-md-flex">
+      <div class="col-md-2">Time</div>
+      <div class="col-md-2">Monday</div>
+      <div class="col-md-2">Tuesday</div>
+      <div class="col-md-2">Wednesday</div>
+      <div class="col-md-2">Thursday</div>
+      <div class="col-md-2">Friday</div>
     </div>
+
+    <!-- Row 1: 09:00 AM -->
+    <div class="row timetable-row g-0 align-items-stretch">
+      <div class="col-12 col-md-2 time-col d-flex align-items-center justify-content-center p-2">
+        09:00 AM - 10:30 AM
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Mathematics</strong><br><small>Room 302</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Physics</strong><br><small>Lab 1</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Mathematics</strong><br><small>Room 302</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Physics</strong><br><small>Lab 1</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="col-md-12 slot-card p-2">
+          <strong>History</strong><br><small>Room 101</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: 10:30 AM (Break Example using col-md-10 to span the rest of the days) -->
+    <div class="row timetable-row g-0 align-items-stretch">
+      <div class="col-12 col-md-2 time-col d-flex align-items-center justify-content-center p-2">
+        10:30 AM - 11:00 AM
+      </div>
+      <div class="col-12 col-md-10 slot">
+        <div class="slot-card break p-2 text-center d-flex align-items-center justify-content-center">
+          <strong>Coffee Break</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: 11:00 AM -->
+    <div class="row timetable-row g-0 align-items-stretch">
+      <div class="col-12 col-md-2 time-col d-flex align-items-center justify-content-center p-2">
+        11:00 AM - 12:30 PM
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Chemistry</strong><br><small>Room 204</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <!-- Empty Slot -->
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Chemistry</strong><br><small>Room 204</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>English Lit</strong><br><small>Room 105</small>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 slot">
+        <div class="slot-card p-2">
+          <strong>Self Study</strong><br><small>Library</small>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-11</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container-fluid">
+            <!-- Logo and Brand -->
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-bootstrap-fill me-2"></i>BrandName
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <!-- Menus -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-house-door me-1"></i>Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-info-circle me-1"></i>About
+                        </a>
+                    </li>
+
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-grid me-1"></i>Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Our Services</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#">Development</a></li>
+                            <li><a class="dropdown-item" href="#">Consulting</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">View All Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <form class="d-flex me-lg-3 mb-3 mb-lg-0" role="search">
+                    <input class="form-control form-control-sm me-2" type="search" placeholder="Search..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-light btn-sm" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+                <!-- Sign Up Button -->
+                <a href="#" class="btn btn-primary btn-sm">
+                    <i class="bi bi-person-plus me-1"></i>Sign Up
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container py-5 my-5">
+        <h1 class="mt-3">Welcome to BrandName</h1>
+        <p class="text-muted">
+            This is sample page content. The fixed navbar stays at the top
+            while you scroll.
+        </p>
+    </main>
+
+    <!-- Fixed Bottom Footer Menu -->
+    <footer class="fixed-bottom bg-dark text-light py-2 shadow-lg">
+        <div class="container-fluid">
+            <div class="d-flex flex-column flex-md-row justify-content-between
+                align-items-center gap-2">
+
+                <!-- Footer Info -->
+                <small>
+                    <i class="bi bi-c-circle me-1"></i>2026 BrandName. All rights reserved.
+                </small>
+
+                <!-- Footer Links -->
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-light text-decoration-none small">
+                        Privacy
+                    </a>
+                    <a href="#" class="text-light text-decoration-none small">
+                        Terms
+                    </a>
+                    <a href="#" class="text-light text-decoration-none small">
+                        Help
+                    </a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-light" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="text-light" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="text-light" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
