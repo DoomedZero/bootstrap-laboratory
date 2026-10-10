@@ -49,26 +49,11 @@ main {
     background-color: chartreuse;
     padding: 20px;
     font-size: 20px;
+    border-radius: 4px;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* Width and height of the scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-/* The background track of the scrollbar */
-::-webkit-scrollbar-track {
-  border-radius: 5px;
-}
-
-/* The draggable handle (thumb) */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 5px;
-}
-
-/* The draggable handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.grid-item:hover{
+    background-color: green;
+    color: white;
 }
