@@ -25,73 +25,81 @@
         <span>Bootstrap Laboratory</span>
     </a>
 
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold">Student Co-Curricular Activities</h2>
-        </div>
+    <div class="container py-4">
 
-        <div class="table-responsive shadow-sm rounded">
-            <table class="table table-striped table-bordered align-middle custom-table-hover mb-0">
-                <thead class="table-dark text-center">
+        <h2 class="text-center mb-3">Co-Curricular Activities</h2>
+        <p class="text-center">
+            Activities that help students develop skills beyond academics.
+        </p>
+
+        <!-- Responsive Table -->
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+
+                <thead class="table-primary">
                     <tr>
-                        <th scope="col">Activity Image</th>
-                        <th scope="col">Activity Name</th>
-                        <th scope="col">Short Description</th>
+                        <th scope="col">No.</th>
+                        <th scope="col">Activity</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Description</th>
                     </tr>
                 </thead>
+
                 <tbody>
-                    <!-- Activity 1 -->
-                    <tr class="style-1">
-                        <td class="text-center">
-                            <img src="../src/debt.jpeg" alt="Debate Club" class="activity-img">
+                    <tr>
+                        <td>1</td>
+                        <td>Debate Club</td>
+                        <td>
+                            <img src="../src/debt.jpeg" class="img-fluid rounded"
+                                alt="Debate activity" width="200">
                         </td>
-                        <td class="fw-bold">National Debate Club</td>
-                        <td>Encourages critical thinking, public speaking, and articulate argumentation on global and
-                            social issues.</td>
+                        <td>Develops public speaking and critical thinking.</td>
                     </tr>
 
-                    <!-- Activity 2 -->
-                    <tr class="style-2">
-                        <td class="text-center">
-                            <img src="../src/rbtcs.jpeg" alt="Robotics" class="activity-img">
+                    <tr>
+                        <td>2</td>
+                        <td>Robotics Club</td>
+                        <td>
+                            <img src="../src/rbtcs.jpeg" class="img-fluid rounded"
+                                alt="Robotics activity" width="200">
                         </td>
-                        <td class="fw-bold">Robotics & Coding Guild</td>
-                        <td>Hands-on experience in building autonomous robots, circuit programming, and automated
-                            hardware design.</td>
+                        <td>Students build robots and learn basic programming.</td>
                     </tr>
 
-                    <!-- Activity 3 -->
-                    <tr class="style-3">
-                        <td class="text-center">
-                            <img src="../src/fnarts.jpeg" alt="Fine Arts" class="activity-img">
+                    <tr>
+                        <td>3</td>
+                        <td>Arts Club</td>
+                        <td>
+                            <img src="../src/fnarts.jpeg" class="img-fluid rounded"
+                                alt="Arts activity" width="200">
                         </td>
-                        <td class="fw-bold">Visual Arts & Painting</td>
-                        <td>Explores canvas sketching, acrylic painting, sculpture modeling, and annual student art
-                            exhibitions.</td>
+                        <td>Encourages drawing, painting and creative skills.</td>
                     </tr>
 
-                    <!-- Activity 4 -->
-                    <tr class="style-4">
-                        <td class="text-center">
-                            <img src="../src/msk.jpeg" alt="Music Band" class="activity-img">
+                    <tr>
+                        <td>4</td>
+                        <td>Music Club</td>
+                        <td>
+                            <img src="../src/msk.jpeg" class="img-fluid rounded"
+                                alt="Music activity" width="200">
                         </td>
-                        <td class="fw-bold">Symphony & Choir Band</td>
-                        <td>Trains students in classical/contemporary instruments, vocal harmony, and stage performance
-                            ensemble.</td>
+                        <td>Provides opportunities to sing and play instruments.</td>
                     </tr>
 
-                    <!-- Activity 5 -->
-                    <tr class="style-5">
-                        <td class="text-center">
-                            <img src="../src/eco.jpeg" alt="Eco Club" class="activity-img">
+                    <tr>
+                        <td>5</td>
+                        <td>Eco Club</td>
+                        <td>
+                            <img src="../src/eco.jpeg" class="img-fluid rounded"
+                                alt="Eco Club activity" width="200">
                         </td>
-                        <td class="fw-bold">Green Earth & Eco Club</td>
-                        <td>Focuses on campus sustainability, tree plantation drives, recycling initiatives, and
-                            environmental workshops.</td>
+                        <td>Promotes tree planting, recycling and environmental awareness.</td>
                     </tr>
                 </tbody>
+
             </table>
         </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
