@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="back-button.css">
+</head>
+
+<body>
+
+    <a href="../index.html" class="lab-home-link">
+        <span aria-hidden="true">←</span>
+        <span>Bootstrap Laboratory</span>
+    </a>
+
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Service Providers</a>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+
+        <h4>Messages</h4>
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> Your service request has been submitted.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> Some services may take extra time.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> Unable to process your request.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+
+        <!-- Message after closing an alert -->
+        <div id="closedMessage" class="alert alert-info d-none" role="status">
+            An alert message has been closed.
+        </div>
+
+        <!-- Service Provider Panels -->
+        <h4 class="mt-4 mb-3">Available Services</h4>
+
+        <div class="row g-3">
+
+            <!-- Plumbing Panel -->
+            <div class="col-md-4">
+                <div class="border rounded h-100">
+                    <div class="bg-light border-bottom p-3">
+                        <h5 class="mb-0">Plumbing Services</h5>
+                    </div>
+
+                    <div class="p-3">
+                        <p>Provider: Zero Plumbing Services</p>
+                        <p>Contact: 7677696767</p>
+                        <p>Price: $50 onwards</p>
+
+                        <h6>Services Offered</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Pipe Repair</li>
+                            <li class="list-group-item">Tap Installation</li>
+                            <li class="list-group-item">Water Leakage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electrical Panel -->
+            <div class="col-md-4">
+                <div class="border rounded h-100">
+                    <div class="bg-light border-bottom p-3">
+                        <h5 class="mb-0">Electrical Services</h5>
+                    </div>
+
+                    <div class="p-3">
+                        <p>Provider: Zero Electricals</p>
+                        <p>Contact: 7677696767</p>
+                        <p>Price: $70 onwards</p>
+
+                        <h6>Services Offered</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Fan Repair</li>
+                            <li class="list-group-item">Wiring</li>
+                            <li class="list-group-item">Light Installation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaning Panel -->
+            <div class="col-md-4">
+                <div class="border rounded h-100">
+                    <div class="bg-light border-bottom p-3">
+                        <h5 class="mb-0">Cleaning Services</h5>
+                    </div>
+
+                    <div class="p-3">
+                        <p>Provider: Zero Home Services</p>
+                        <p>Contact: 7677696767</p>
+                        <p>Price: $100 onwards</p>
+
+                        <h6>Services Offered</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Home Cleaning</li>
+                            <li class="list-group-item">Office Cleaning</li>
+                            <li class="list-group-item">Deep Cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="bg-light border-top text-center p-3 mt-4">
+        Service Providers - Practical 15
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const alerts = document.querySelectorAll(".alert-dismissible");
+        const closedMessage = document.getElementById("closedMessage");
+
+        alerts.forEach(function (alert) {
+            alert.addEventListener("closed.bs.alert", function () {
+                closedMessage.classList.remove("d-none");
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

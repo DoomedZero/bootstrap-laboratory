@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-13</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="back-button.css">
+</head>
+
+<body>
+
+    <a href="../index.html" class="lab-home-link">
+        <span aria-hidden="true">←</span>
+        <span>Bootstrap Laboratory</span>
+    </a>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <h2 class="text-center mb-4">Practical 13: Progress Bars</h2>
+
+                <!-- Basic Progress Bar -->
+                <h5>1. Basic Progress Bar</h5>
+                <div class="progress mb-4">
+                    <div class="progress-bar" style="width: 40%;">40%</div>
+                </div>
+
+                <!-- Colored Progress Bars -->
+                <h5>2. Colored Progress Bars</h5>
+
+                <label>HTML - 80%</label>
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+                </div>
+
+                <label>CSS - 60%</label>
+                <div class="progress mb-2">
+                    <div class="progress-bar bg-warning text-dark" style="width: 60%;">60%</div>
+                </div>
+
+                <label>JavaScript - 45%</label>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-danger" style="width: 45%;">45%</div>
+                </div>
+
+                <!-- Striped Progress Bar -->
+                <h5>3. Striped Progress Bar</h5>
+                <div class="progress mb-4">
+                    <div class="progress-bar progress-bar-striped bg-info"
+                         style="width: 70%;">70%</div>
+                </div>
+
+                <!-- Animated Progress Bar -->
+                <h5>4. Animated Progress Bar</h5>
+                <div class="progress mb-4">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                         style="width: 75%;">75%</div>
+                </div>
+
+                <!-- Multicolour Progress Bar -->
+                <h5>5. Multicolour Progress Bar</h5>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-success" style="width: 25%;">25%</div>
+                    <div class="progress-bar bg-info" style="width: 25%;">25%</div>
+                    <div class="progress-bar bg-warning" style="width: 25%;">25%</div>
+                    <div class="progress-bar bg-danger" style="width: 25%;">25%</div>
+                </div>
+
+                <!-- Dynamic Progress Bar -->
+                <h5>6. Dynamic Progress Bar</h5>
+
+                <div class="progress mb-3">
+                    <div id="dynamicBar" class="progress-bar"
+                         role="progressbar" style="width: 0%;">0%</div>
+                </div>
+
+                <button class="btn btn-primary" onclick="increaseProgress()">
+                    Increase Progress
+                </button>
+
+                <button class="btn btn-secondary" onclick="resetProgress()">
+                    Reset
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let progress = 0;
+
+        function increaseProgress() {
+            progress += 10;
+
+            if (progress > 100) {
+                progress = 100;
+            }
+
+            const bar = document.getElementById("dynamicBar");
+
+            bar.style.width = progress + "%";
+            bar.textContent = progress + "%";
+            bar.setAttribute("aria-valuenow", progress);
+        }
+
+        function resetProgress() {
+            progress = 0;
+
+            const bar = document.getElementById("dynamicBar");
+
+            bar.style.width = "0%";
+            bar.textContent = "0%";
+            bar.setAttribute("aria-valuenow", progress);
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
