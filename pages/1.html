@@ -7,19 +7,22 @@
     <title>Practical-1</title>
     <link rel="icon" href="../src/bootstrap-logo.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="btl.css">
+    <link rel="stylesheet" href="back-button.css">
 </head>
 
 <body class="bg-light py-4">
 
-    <!-- 1. FIXED WIDTH CONTAINER -->
+    <a href="../../index.html" class="lab-home-link">
+        <span aria-hidden="true">←</span>
+        <span>Bootstrap Laboratory</span>
+    </a>
+
     <div class="container bg-primary text-white p-5 mb-4 text-center rounded">
         <h2>Standard Container (.container)</h2>
         <p>This container has a fixed maximum width at each responsive breakpoint. On large screens, it centers itself
             and leaves visible margins on the left and right sides.</p>
     </div>
 
-    <!-- 2. FULL WIDTH CONTAINER -->
     <div class="container-fluid bg-dark text-white p-5 text-center rounded">
         <h2>Fluid Container (.container-fluid)</h2>
         <p>This container is fluid, meaning it always stretches to fill 100% of the screen width, regardless of whether

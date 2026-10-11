@@ -1,0 +1,47 @@
+.lab-home-link {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 99999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+
+  background: #212529;
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+}
+
+.lab-home-link:hover {
+  background: #0d6efd;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.lab-home-link:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 3px;
+}
+
+.lab-home-link span:first-child {
+  font-size: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .lab-home-link {
+    top: 12px;
+    left: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
