@@ -61,7 +61,7 @@ main {
 
 @media screen and (min-width: 529px) and (max-width: 792px) {
     .grid-container {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -69,7 +69,8 @@ main {
     .grid-container {
         grid-template-columns: 1fr;
     }
-    #logo{
+
+    #logo {
         margin-top: 20px;
     }
 }
