@@ -31,7 +31,7 @@ main {
 
 .header {
     letter-spacing: -2px;
-    font-size: 80px;
+    font-size: clamp(40px, 10vw, 80px);
 }
 
 .bold {
@@ -40,20 +40,36 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 15px;
 }
 
 .grid-item {
     background-color: chartreuse;
+    min-height: 137px;
     padding: 20px;
     font-size: 20px;
     border-radius: 4px;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-.grid-item:hover{
+.grid-item:hover {
     background-color: green;
     color: white;
+}
+
+@media screen and (min-width: 529px) and (max-width: 792px) {
+    .grid-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 529px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    #logo{
+        margin-top: 20px;
+    }
 }
