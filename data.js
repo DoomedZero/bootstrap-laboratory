@@ -42,5 +42,53 @@ export const practicals = [
     {
         description: "fixed top navbar and footer",
         link: "pages/11.html"
+    },
+    {
+        description: "Education website",
+        link: "pages/12.html"
+    },
+    {
+        description: "Various progress bars",
+        link: "pages/13.html"
+    },
+    {
+        description: "Rounded & nested media",
+        link: "pages/14.html"
+    },
+    {
+        description: "Service Provider Dashboard",
+        link: "pages/15.html"
+    },
+    {
+        description: "Page transition",
+        link: "pages/16.html"
+    },
+    {
+        description: "Modal dialogs",
+        link: "pages/17.html"
+    },
+    {
+        description: "News story page",
+        link: "pages/lup.html"
+    },
+    {
+        description: "Animated photo gallery",
+        link: "pages/lup.html"
+    },
+    {
+        description: "Header & footer w/ utility classes",
+        link: "pages/lup.html"
+    },
+    {
+        description: "Customized Sass Demo",
+        link: "pages/lup.html"
+    },
+    {
+        description: "Custom themes & components",
+        link: "pages/lup.html"
+    },
+    {
+        description: "5-7 page website",
+        link: "pages/lup.html"
     }
 ];
